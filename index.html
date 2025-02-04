@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Love Notes ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ffb199);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        .note-container {
+            width: 450px;
+            height: 550px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+        .note-header {
+            background: #d63384;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .note-display {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #444;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .note-button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 14px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .note-button:hover {
+            transform: scale(1.1);
+            background: #b61e70;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="Virgoun  Surat Cinta Untuk Starla Lirik Lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="note-container">
+        <div class="note-header">buaaattt sayanggnyaa akuu 💌</div>
+        <div class="note-display" id="noteDisplay">Tekan tombol di bawah untuk melihat kejutan cintaku! 💖</div>
+        <button class="note-button" onclick="showNote()">penceeettt yaaaa 💕</button>
+    </div>
+
+    <script>
+        const notes = [
+            "aalloo alloo sayaangnya akuu 💖",
+            "Aku nggak tahu bagaimana dunia bisa sebaik ini hingga mempertemukan aku dengan kamu. Tapi yang aku tahu, sekarang aku punya kamu, seseorang yang paling spesial di hidup aku. Aku nggak butuh alasan rumit buat sayang sama kamu, karena sayang aku ke kamu itu udah kayak napas—nggak bisa dihitung, nggak bisa dihentikan, dan selalu ada.",
+            " aku bakal ada buat kamu, di saat kamu bahagia, di saat kamu sedih, di saat kamu butuh sandaran. Aku nggak mau kamu ngerasa sendiri lagi, karena mulai sekarang, aku dan kamu adalah kita.✨",
+            "Aku mau jadi alasan kamu tersenyum setiap hari, meskipun kadang aku nggak selalu sempurna dalam mencintai kamu, tapi aku selalu berusaha. ❤️",
+            "i lovee youu soooo mucchoo!!! 💭💘",
+            "my sweet and pretty babyy!!!❤️",
+            "Kamu itu spesial, lebih dari yang kamu kira.",
+            "Peluk aku kalau lelah, aku selalu jadi tempat pulangmu.",
+            "Kalau dunia lagi berat, sandarin aja semuanya ke aku.",
+            "Kita jalan bareng, nggak ada yang harus ngelewatin semuanya sendirian.",
+            "Peluk aku kalau lelah, aku selalu jadi tempat pulangmu.",
+            "Terima kasih udah ada di hidup aku, kamu anugerah terindah."
+        ];
+        
+        let index = 0;
+        function showNote() {
+            if (index < notes.length) {
+                let displayElement = document.getElementById("noteDisplay");
+                displayElement.style.opacity = 0;
+                setTimeout(() => {
+                    displayElement.textContent = notes[index];
+                    displayElement.classList.add("fade-in");
+                    index++;
+                }, 500);
+            }
+        }
+
+        function showNote() {
+    let audio = document.getElementById("backgroundMusic");
+    if (audio.paused) {
+        audio.play();
+    }
+
+    if (index < notes.length) {
+        let displayElement = document.getElementById("noteDisplay");
+        displayElement.style.opacity = 0;
+        setTimeout(() => {
+            displayElement.textContent = notes[index];
+            displayElement.classList.add("fade-in");
+            index++;
+        }, 500);
+    }
+}
+
+    </script>
+</body>
+</html>
+
+
+
+
+                
